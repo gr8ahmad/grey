@@ -56,4 +56,5 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		<?php echo do_shortcode("[woo_cart_but]"); ?>
 	</header><!-- #masthead -->
