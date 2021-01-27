@@ -1,4 +1,7 @@
 <?php
+
+require_once 'custom-elementor.php';
+
 /**
  * _s functions and definitions
  *
