@@ -147,7 +147,7 @@ function _s_scripts() {
 	wp_style_add_data( '_s-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	
+
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -203,16 +203,21 @@ function woo_cart_but() {
         $cart_count = WC()->cart->cart_contents_count; // Set variable for cart item count
         $cart_url = wc_get_cart_url();  // Set Cart URL
   
-        ?>
-        <li><a class="menu-item cart-contents" href="<?php echo $cart_url; ?>" title="My Basket">
-	    <?php
-        if ( $cart_count > 0 ) {
+		?>
+		<div class="one-third-col column3" id="header_col3">
+		<li>
+		<a class="menu-item cart-content" href="<?php echo $cart_url; ?>" title="My Basket">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.59 35.71"><defs><style>.cls-1{fill:#aaa297;}.cls-2{fill:none;stroke:#aaa297;stroke-miterlimit:10;}.cls-3{font-size:10.91px;fill:#efedea;font-family:MyriadPro-Regular, Myriad Pro;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" y="9.8" width="20.59" height="25.91"/><path class="cls-2" d="M6.31,11.13V4.49a4,4,0,0,1,4-4h0a4,4,0,0,1,4,4v6.64"/>
+		<?php
+        if ( $cart_count >= 0 ) {
        ?>
-            <span class="cart-contents-count"><?php echo $cart_count; ?></span>
+			<text class="cls-3" transform="translate(7.24 26.95)"><?php echo $cart_count; ?></text>
         <?php
         }
-        ?>
-        </a></li>
+		?>
+		 </g></g></svg>
+	    
+        </a></li></div>
         <?php
 	        
     return ob_get_clean();
@@ -230,7 +235,8 @@ function woo_cart_but_count( $fragments ) {
     $cart_url = wc_get_cart_url();
     
     ?>
-    <a class="cart-contents menu-item" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+	<a class="cart-contents menu-item" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.59 35.71"><defs><style>.cls-1{fill:#aaa297;}.cls-2{fill:none;stroke:#aaa297;stroke-miterlimit:10;}.cls-3{font-size:10.91px;fill:#efedea;font-family:MyriadPro-Regular, Myriad Pro;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect class="cls-1" y="9.8" width="20.59" height="25.91"/><path class="cls-2" d="M6.31,11.13V4.49a4,4,0,0,1,4-4h0a4,4,0,0,1,4,4v6.64"/></g></g></svg>
 	<?php
     if ( $cart_count > 0 ) {
         ?>

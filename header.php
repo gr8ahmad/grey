@@ -26,6 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="one-third-col column1" id="header_col1">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -55,6 +56,7 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
+		</nav></div><!-- #site-navigation -->
+		<div class="one-third-col column2" id="header_col2"><p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p></div>
 		<?php echo do_shortcode("[woo_cart_but]"); ?>
 	</header><!-- #masthead -->
