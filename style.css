@@ -1130,3 +1130,31 @@ a.menu-item.cart-content svg{
 .site-branding p.site-title {
     display: none;
 }
+
+
+
+
+
+/* Footer */
+footer#colophon {
+    width: 100%;
+    height: 200px;
+    background-color: #d8d7d5;
+    border: 10px solid #d8d7d5;
+    padding: 10px;
+}
+footer#colophon  .site-info {
+    width: 100%;
+    height: 100%;
+	border: 10px solid #edeceb;
+	text-align: center;
+	color: #000000c7;
+	
+	line-height: 241px;
+    font-size: 14px;
+}
+footer#colophon  .site-info a{
+	color: #7d7d7d;
+	line-height: 100%;
+
+}
