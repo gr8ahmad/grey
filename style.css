@@ -994,31 +994,26 @@ textarea {
     color: #6d6d6d;
     font-size: 2rem;
 }
-<<<<<<< Updated upstream
-body {background-color: red}
-body {background-color: green;}
-=======
-
 
 
 /* # WooCommerce Cart Icon CSS with FontAwesome 5
 ---------------------------------------------------------------------------------------------------- */
 
-.cart-contents {
+/* .cart-contents {
     position: relative;
     display: flex !important;
     flex-flow: column nowrap;
     justify-content: center;
-}
+} */
 
-.cart-contents:before {
+/* .cart-contents:before {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;	
     content: "\f290" !important;
     font-size: 30px;
     color: #FF1493;
-}
-
+} */
+/* 
 .cart-contents:hover {
     text-decoration: none;
 }
@@ -1040,5 +1035,31 @@ body {background-color: green;}
     	background: #000;
     	border-radius: 50%;
     	padding: 1px;  
+} */
+
+/* ====== products styling =======*/
+.woocommerce-page a{
+	color: #a9a9a9;
+	text-decoration: none;
 }
->>>>>>> Stashed changes
+.woocommerce-page ul.products.columns-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 300px));
+    grid-template-rows: auto;
+}
+ul.products.columns-4 li.product{
+	width: 100% !important;
+}
+h2.woocommerce-loop-product__title {
+    color: #a9a9a9;
+    font-size: 1rem;
+    font-weight: 100;
+}
+a.woocommerce-LoopProduct-link.woocommerce-loop-product__link .onsale {
+    color: #000000;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    background: #ffffff73;
+    padding: 2px 7px;
+}
